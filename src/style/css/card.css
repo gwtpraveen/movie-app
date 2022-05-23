@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.card {
+  position: relative;
+  width: 220px;
+  height: 400px;
+  background-color: rgba(223, 223, 223, 0.518);
+  border-radius: 10px;
+  padding-bottom: 15px;
+}
+.card .image-container {
+  width: 220px;
+  height: 82%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.card .image-container::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.23);
+  top: 0;
+  left: 0;
+  bottom: 5px;
+}
+.card .image-container .poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .details-container {
+  font-size: 15px;
+  margin-top: 5px;
+  padding: 5px;
+}
+.card .details-container .list {
+  display: flex;
+}
+.card .details-container .list .list-item {
+  margin-right: 0.5rem;
+}
+.card .details-container .list .list-item + .list-item::before {
+  content: "•";
+  margin-right: 0.3rem;
+}
+.card .bookmark-icon-container {
+  background-color: rgba(0, 0, 0, 0.338);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .bookmark-icon-container:hover {
+  background-color: rgba(0, 0, 0, 0.509);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=card.css.map */
