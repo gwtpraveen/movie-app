@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
+import SpecialCard from './components/SpecialCard';
 import Card from './components/Card';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <NavBar/>
       <SearchBar/>
       <Card data={data}/>
+      <SpecialCard data={data}/>
     </>
   );
 }
