@@ -1,0 +1,25 @@
+.nav {
+  background-color: rgba(197, 133, 36, 0.341);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav .nav-icon-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav .nav-icon-list .nav-icon {
+  cursor: pointer;
+}
+.nav .nav-icon-list .nav-icon path {
+  transition: 200ms ease;
+}
+.nav .nav-icon-list .nav-icon:hover path {
+  fill: rgb(252, 92, 0);
+}
+.nav .profile-pic {
+  width: 60px;
+}
+
+/*# sourceMappingURL=navBar.css.map */

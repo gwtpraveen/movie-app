@@ -1,0 +1,30 @@
+.nav {
+    background-color: rgba(197, 133, 36, 0.341);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-icon-list {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .nav-icon {
+            cursor: pointer;
+            path {
+                transition: 200ms ease;
+            }
+
+            &:hover {
+                path {
+                    fill: rgb(252, 92, 0);
+                }
+            }
+        }
+    }
+
+    .profile-pic {
+        width: 60px;
+    }
+}
+
