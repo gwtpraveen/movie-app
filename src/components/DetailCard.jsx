@@ -10,7 +10,6 @@ const DetailsCard = ({data}) => {
             </div>
             <div className="details-div">
                 <div className="type-production-container">
-                    <span>{Production}</span>
                     <span className="type">{Type}</span>
                 </div>
                 <div className="title-rating-container">
@@ -25,22 +24,25 @@ const DetailsCard = ({data}) => {
                     <div className="rating-div">
                         <FontAwesome className="fa-solid fa-star" />
                         <div>
-                            <p><span>{imdbRating}</span>/10</p>
+                            <span className="rating">{imdbRating}</span><span className="ten">/10</span>
                             <p>{imdbVotes}</p>
                         </div>
                     </div>
                 </div>
-                <p>{Language}</p>
-                <p>{Plot}</p>
-                <div>
-                    {Genre.split(", ").map(item => <button key={item}>{item}</button>)}
+                <p className="language">{Language}</p>
+                <p className="plot">{Plot}</p>
+                <div className="genres">
+                    {Genre.split(", ").map(item => <button key={item} className="btn">{item}</button>)}
                 </div>
-                <p>Director : {Director}</p>
-                <p>Writer: {Writer}</p>
-                <p>Actors: {Actors}</p>
-                <p>Awards: {Awards}</p>
-                <p>Country: {Country}</p>
-                <p>BoxOffice: {BoxOffice}</p>
+                <div className="other">
+                    <p>Production: {Production}</p>
+                    <p>Director : {Director}</p>
+                    <p>Writer: {Writer}</p>
+                    <p>Actors: {Actors}</p>
+                    <p>Awards: {Awards}</p>
+                    <p>Country: {Country}</p>
+                    <p>BoxOffice: {BoxOffice}</p>
+                </div>
             </div>
         </div>
      );
