@@ -29,19 +29,19 @@ const DetailsCard = ({data}) => {
                         </div>
                     </div>
                 </div>
-                <p className="language">{Language}</p>
+                <p className="language"><i className="fa-solid fa-language"></i>{Language}</p>
                 <p className="plot">{Plot}</p>
                 <div className="genres">
                     {Genre.split(", ").map(item => <button key={item} className="btn">{item}</button>)}
                 </div>
                 <div className="other">
-                    <p>Production: {Production}</p>
-                    <p>Director : {Director}</p>
-                    <p>Writer: {Writer}</p>
-                    <p>Actors: {Actors}</p>
-                    <p>Awards: {Awards}</p>
-                    <p>Country: {Country}</p>
-                    <p>BoxOffice: {BoxOffice}</p>
+                    <p><i className="fa-solid fa-building"></i>Production: {Production}</p>
+                    <p><i className="fa-solid fa-clapperboard"></i>Director : {Director}</p>
+                    <p><i className="fa-solid fa-pen-clip"></i>Writer: {Writer}</p>
+                    <p><i className="fa-solid fa-users-line"></i>Actors: {Actors}</p>
+                    <p><i className="fa-solid fa-trophy"></i>Awards: {Awards}</p>
+                    <p><i className="fa-solid fa-earth-americas"></i>Country: {Country}</p>
+                    <p><i className="fa-solid fa-ticket"></i>BoxOffice: {BoxOffice}</p>
                 </div>
             </div>
         </div>

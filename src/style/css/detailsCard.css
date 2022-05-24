@@ -5,12 +5,19 @@
   grid-template-areas: "details img";
   max-width: 1200px;
   margin: auto;
+  background-color: rgba(255, 2, 2, 0.202);
+  align-items: center;
+  padding: 10px;
 }
 .details-card .poster {
   grid-area: img;
 }
 .details-card .details-div {
   grid-area: details;
+}
+.details-card .details-div .fa-solid {
+  margin-right: 0.6rem;
+  opacity: 0.8;
 }
 .details-card .details-div .type {
   opacity: 0.6;
@@ -20,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 70%;
   margin: 0rem 0 1rem 0;
 }
 .details-card .details-div .title-rating-container .title-div .title {
@@ -55,19 +62,27 @@
 }
 .details-card .details-div .plot {
   margin: 1rem 0;
-  width: 60%;
+  width: 70%;
 }
 .details-card .details-div .genres {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   display: flex;
   gap: 1rem;
 }
 .details-card .details-div .genres .btn {
+  width: 100px;
   padding: 0.5em 1em;
 }
 .details-card .details-div .other {
-  line-height: 23px;
+  margin-top: 1.5rem;
+  line-height: 25px;
   opacity: 0.8;
+  width: 70%;
+}
+.details-card .details-div .other p {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.348);
+  margin-bottom: 0.3rem;
 }
 
 /*# sourceMappingURL=detailsCard.css.map */
