@@ -1,0 +1,38 @@
+.carousel {
+    overflow-x: hidden;
+    position: relative;
+    .container {
+        display: flex;
+        gap: 1rem;
+        // transform: translateX(-350%);
+    }
+
+    .arrows {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #fff;
+        transition: 500ms ease;
+        opacity: .4;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    .left-arrow {
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.607));
+        left: 0;
+    }
+
+    .right-arrow {
+        
+        right: 0px;
+    }
+}

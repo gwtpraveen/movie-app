@@ -6,6 +6,8 @@
   background-color: rgba(255, 15, 15, 0.518);
   border-radius: 10px;
   overflow: hidden;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .special-card .image-container {
   width: 220px;
