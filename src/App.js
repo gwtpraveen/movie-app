@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar';
 import SpecialCard from './components/SpecialCard';
 import Carousel from './components/Carousel';
 import Card from './components/Card';
+import DetailsCard from './components/DetailCard';
 import data from "./json/movies.json";
 
 function App() {
@@ -12,10 +13,11 @@ function App() {
   return (
     <>
       <NavBar/>
-      <SearchBar/>
+      {/* <SearchBar/>
       <Card data={data1}/>
       <SpecialCard data={data1}/>
-      <Carousel data={data.slice(0, 15)}/>
+      <Carousel data={data.slice(0, 15)}/> */}
+      <DetailsCard data={data1}/>
     </>
   );
 }

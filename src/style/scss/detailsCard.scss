@@ -1,0 +1,27 @@
+.details-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "details img";
+    max-width: 1200px;
+    margin: auto;
+    background-color: red;
+    .poster {
+        grid-area: img;
+        background-color: blue;
+    }
+
+    .details-div {
+        grid-area: details;
+
+        .type {
+            margin-left: 1rem;
+        }
+
+        .title-rating-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+    }
+}
