@@ -13,11 +13,11 @@ function App() {
   return (
     <>
       <NavBar/>
-      {/* <SearchBar/>
-      <Card data={data1}/>
-      <SpecialCard data={data1}/>
-      <Carousel data={data.slice(0, 15)}/> */}
-      <DetailsCard data={data1}/>
+      {/* <SearchBar/> */}
+      {/* <Card data={data1}/> */}
+      {/* <SpecialCard data={data1}/> */}
+      <Carousel data={data.slice(0, 15)}/>
+      {/* <DetailsCard data={data1}/> */}
     </>
   );
 }

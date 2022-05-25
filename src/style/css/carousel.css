@@ -5,6 +5,7 @@
 .carousel .container {
   display: flex;
   gap: 1rem;
+  transition: 500ms ease;
 }
 .carousel .arrows {
   position: absolute;
