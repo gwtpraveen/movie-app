@@ -5,6 +5,7 @@ import DetailsCard from './components/DetailCard';
 import HomePage from './components/HomePage';
 import MoviePage from './components/MoviePage';
 import TvShowspage from './components/tvshowsPage';
+import Pagination from './components/pagination';
 
 
 function App() {
@@ -13,9 +14,10 @@ function App() {
     <>
       <NavBar/>
       <SearchBar/>
+      <Pagination totalItems={250} itemPerPage={25}/>
       {/* <HomePage/> */}
       {/* <MoviePage/> */}
-      <TvShowspage/>
+      {/* <TvShowspage/> */}
       {/* <DetailsCard data={data1}/> */}
     </>
   );
