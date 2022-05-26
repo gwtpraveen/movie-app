@@ -5,7 +5,7 @@ import tvshows from "../json/tvshows.json";
 const TvShowspage = (props) => {
     return ( 
         <section className="tvshowSection">
-            {tvshows.map(item => <Card data={item}/>)}
+            {tvshows.map((item, idx) => <Card key={idx} data={item}/>)}
         </section>
      );
 }

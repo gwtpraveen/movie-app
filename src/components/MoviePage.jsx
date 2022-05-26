@@ -5,7 +5,7 @@ import movies from "../json/movies.json";
 const MoviePage = (props) => {
     return ( 
         <section className="moviesSection">
-            {movies.map(item => <Card data={item}/>)}
+            {movies.map((item, idx) => <Card key={idx} data={item}/>)}
         </section>
     );
 }
