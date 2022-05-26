@@ -10,7 +10,6 @@ const Card = ({data}) => {
              <div className="details-container">
                  <div className="list">
                      <p className="list-item">{Year}</p>
-                     <p className="list-item">{Type}</p>
                      <p className="list-item">{Rated}</p>
                  </div>
                  <h2 className="title">{Title}</h2>

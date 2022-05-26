@@ -1,0 +1,26 @@
+.homePage.container {
+    max-width: 1280px;
+    margin: 2.5rem auto;
+    .section {
+        margin: 3rem 0;
+        .TitleH2 {
+            margin: 1rem 0;
+            letter-spacing: 2px;
+            font-size: 1.9rem;
+        }
+
+        .card-container {
+            display: flex;
+            // gap: 1.5rem;
+            row-gap: .8rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .showMoreBtn {
+            display: block;
+            padding: .5em 1em;
+            margin: 1rem auto 1rem;;
+        }
+    }
+}

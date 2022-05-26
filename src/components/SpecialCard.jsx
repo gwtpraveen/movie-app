@@ -8,14 +8,13 @@ const SpecialCard = ({data}) => {
         const imgEle = card.current;
 
         const opctions = {
-            rootMargin: "0px 220px 0px 0px"
+            rootMargin: "0px 440px 0px 0px"
         }
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.firstElementChild.firstElementChild.src = Poster;
-                    // console.log(entry.target.lastElementChild.firstElementChild.firstElementChild.innerHTML)
                     observer.unobserve(entry.target);
                 }
             })
