@@ -3,7 +3,8 @@ import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
 import DetailsCard from './components/DetailCard';
 import HomePage from './components/HomePage';
-import data from "./json/movies.json";
+import MoviePage from './components/MoviePage';
+import TvShowspage from './components/tvshowsPage';
 
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
     <>
       <NavBar/>
       <SearchBar/>
-      <HomePage/>
+      {/* <HomePage/> */}
+      {/* <MoviePage/> */}
+      <TvShowspage/>
       {/* <DetailsCard data={data1}/> */}
     </>
   );

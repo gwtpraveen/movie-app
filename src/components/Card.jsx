@@ -1,7 +1,7 @@
 import "../style/css/card.css";
 
 const Card = ({data}) => {
-    const {Title, Year, Rated, Type, Poster} = data;
+    const {Title, Year, Rated, Poster} = data;
     return ( 
          <div className="card">
              <div className="image-container">
