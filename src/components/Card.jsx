@@ -2,12 +2,12 @@ import "../style/css/card.css";
 import { useState, memo } from "react";
 
 const Card = ({data, onBookmark, bookmarks}) => {
-    const {Title, Year, Rated, Poster, Type} = data;
+    const {Title, Year, Rated, Poster, Type, imdbID} = data;
     const [isBookmarked, setIsbookmarked] = useState(bookmarks.includes(Title));
 
     const onClickBookmark = () => {
         setIsbookmarked(preVal => !preVal);
-        onBookmark(Title, Type)
+        onBookmark(imdbID, Type)
     }
 
     return ( 
