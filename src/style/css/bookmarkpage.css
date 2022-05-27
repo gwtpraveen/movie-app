@@ -23,5 +23,9 @@
   padding: 0.5em 1em;
   margin: 1rem auto 1rem;
 }
+.bookmarkPage .nobookmark {
+  font-size: 2rem;
+  text-align: center;
+}
 
 /*# sourceMappingURL=bookmarkpage.css.map */
