@@ -1,7 +1,15 @@
 import "../style/css/card.css";
+import { useState, memo } from "react";
 
-const Card = ({data}) => {
-    const {Title, Year, Rated, Poster} = data;
+const Card = ({data, onBookmark, bookmarks}) => {
+    const {Title, Year, Rated, Poster, Type} = data;
+    const [isBookmarked, setIsbookmarked] = useState(bookmarks.includes(Title));
+
+    const onClickBookmark = () => {
+        setIsbookmarked(preVal => !preVal);
+        onBookmark(Title, Type)
+    }
+
     return ( 
          <div className="card">
              <div className="image-container">
@@ -14,11 +22,11 @@ const Card = ({data}) => {
                  </div>
                  <h2 className="title">{Title}</h2>
              </div>
-             <div className="bookmark-icon-container">
-                 <img src="./images/icons/icon-bookmark-empty.svg" alt="" className="bookmark-icon"/>
+             <div className="bookmark-icon-container" onClick={onClickBookmark}>
+                 <img src={`./images/icons/icon-bookmark-${ isBookmarked ? "full":"empty"}.svg`} alt="" className="bookmark-icon"/>
              </div>
          </div>
      );
 }
- 
-export default Card;
+
+export default memo(Card);

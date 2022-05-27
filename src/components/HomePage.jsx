@@ -6,7 +6,7 @@ import tvshows from "../json/tvshows.json";
 import mostpopular from "../json/mostpopular.json";
 import { useState } from 'react';
 
-const HomePage = (props) => {
+const HomePage = ({onBookmark, movieBookmark, seriesBookmark}) => {
     const [movieLimit, setMovieLimit] = useState(10);
     const [tvshowLimit, setTvhowLimit] = useState(10);
 
@@ -26,14 +26,14 @@ const HomePage = (props) => {
             <section className='section'>
                 <h2 className='TitleH2'>Movies</h2>
                 <div className='card-container'>
-                    {movies.slice(0, movieLimit).map(item => <Card data={item}/>)}
+                    {movies.slice(0, movieLimit).map(item => <Card key={item.Title} data={item} onBookmark={onBookmark} bookmarks={movieBookmark}/>)}
                 </div>
                 <button className='showMoreBtn' onClick={increseMovieLimit}>Show More...</button>
             </section>
             <section className='section'>
                 <h2 className='TitleH2'>TV Shows</h2>
                 <div className='card-container'>
-                    {tvshows.slice(0, tvshowLimit).map(item => <Card data={item}/>)}
+                    {tvshows.slice(0, tvshowLimit).map(item => <Card key={item.Title} data={item} onBookmark={onBookmark} bookmarks={seriesBookmark}/>)}
                 </div>
                 <button className='showMoreBtn' onClick={increseTvshowLimit}>Show More...</button>
             </section>

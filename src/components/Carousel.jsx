@@ -28,7 +28,7 @@ const Carousel = ({data}) => {
     return ( 
         <div className="carousel" ref={card}>
             <div className="container">
-                {data.map(item => <SpecialCard data={item} key={item.imdbID}/>)}
+                {data.map((item, idx) => <SpecialCard data={item} key={idx}/>)}
             </div>
             <div className="left-arrow arrows" onClick={() => moveCarousel("right")}>
                 <i className="fa-solid fa-angle-left"></i>
