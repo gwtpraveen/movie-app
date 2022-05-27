@@ -1,4 +1,4 @@
-.homePage.container {
+.bookmarkPage {
     max-width: 1280px;
     margin: 2.5rem auto;
     .section {
@@ -10,10 +10,12 @@
         }
 
         .card-container {
+            max-width: 1050px;
+            margin: auto;
             display: flex;
+            gap: .8rem;
+            justify-content: flex-start;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
         }
 
         .showMoreBtn {

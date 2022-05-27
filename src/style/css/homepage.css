@@ -12,9 +12,9 @@
 }
 .homePage.container .section .card-container {
   display: flex;
-  row-gap: 0.8rem;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 .homePage.container .section .showMoreBtn {
   display: block;

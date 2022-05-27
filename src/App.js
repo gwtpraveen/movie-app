@@ -38,7 +38,7 @@ function App() {
         <Route path="/home" element={<HomePage onBookmark={handleBookmark} movieBookmark={movieBookmark} seriesBookmark={seriesBookmark}/>}/>
         <Route path='/movies' element={<MoviePage onBookmark={handleBookmark} bookmarks={movieBookmark}/>}/>
         <Route path='/tvshows' element={<TvShowspage onBookmark={handleBookmark} bookmarks={seriesBookmark}/>}/>
-        <Route path='/bookmark' element={<BookmarkPage seriesBookmark={seriesBookmark} movieBookmark={movieBookmark}/>}/>
+        <Route path='/bookmark' element={<BookmarkPage seriesBookmark={seriesBookmark} movieBookmark={movieBookmark} onBookmark={handleBookmark}/>}/>
       {/* <DetailsCard data={data1}/> */}
     </Routes>
     </>

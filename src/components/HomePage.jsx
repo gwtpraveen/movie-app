@@ -7,15 +7,15 @@ import mostpopular from "../json/mostpopular.json";
 import { useState } from 'react';
 
 const HomePage = ({onBookmark, movieBookmark, seriesBookmark}) => {
-    const [movieLimit, setMovieLimit] = useState(10);
-    const [tvshowLimit, setTvhowLimit] = useState(10);
+    const [movieLimit, setMovieLimit] = useState(12);
+    const [tvshowLimit, setTvhowLimit] = useState(12);
 
     const increseMovieLimit = () => {
-        setMovieLimit(prevVal => prevVal + 10);
+        setMovieLimit(prevVal => prevVal + 8);
     };
 
     const increseTvshowLimit = () => {
-        setTvhowLimit(prevVla => prevVla + 10);
+        setTvhowLimit(prevVla => prevVla + 8);
     };
 
     return ( 

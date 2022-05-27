@@ -3,7 +3,7 @@ import { useState, memo } from "react";
 
 const Card = ({data, onBookmark, bookmarks}) => {
     const {Title, Year, Rated, Poster, Type, imdbID} = data;
-    const [isBookmarked, setIsbookmarked] = useState(bookmarks.includes(Title));
+    const [isBookmarked, setIsbookmarked] = useState(bookmarks.includes(imdbID));
 
     const onClickBookmark = () => {
         setIsbookmarked(preVal => !preVal);

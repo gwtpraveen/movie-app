@@ -1,0 +1,27 @@
+.bookmarkPage {
+  max-width: 1280px;
+  margin: 2.5rem auto;
+}
+.bookmarkPage .section {
+  margin: 3rem 0;
+}
+.bookmarkPage .section .TitleH2 {
+  margin: 1rem 0;
+  letter-spacing: 2px;
+  font-size: 1.9rem;
+}
+.bookmarkPage .section .card-container {
+  max-width: 1050px;
+  margin: auto;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.bookmarkPage .section .showMoreBtn {
+  display: block;
+  padding: 0.5em 1em;
+  margin: 1rem auto 1rem;
+}
+
+/*# sourceMappingURL=bookmarkpage.css.map */
