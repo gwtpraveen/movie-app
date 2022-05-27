@@ -1,0 +1,19 @@
+.notfound {
+    max-width: 1280px;
+    margin: 1.5rem auto;
+    text-align: center;
+
+    .h2 {
+        font-size: 5rem;
+    }
+
+    .status {
+        font-weight: bolder;
+        margin: 1rem 0;
+    }
+
+    .btn {
+        margin: 1rem 0;
+        padding: .5em 1em;
+    }
+}

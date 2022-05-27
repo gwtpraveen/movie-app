@@ -1,0 +1,18 @@
+.notfound {
+  max-width: 1280px;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+.notfound .h2 {
+  font-size: 5rem;
+}
+.notfound .status {
+  font-weight: bolder;
+  margin: 1rem 0;
+}
+.notfound .btn {
+  margin: 1rem 0;
+  padding: 0.5em 1em;
+}
+
+/*# sourceMappingURL=notfound.css.map */
