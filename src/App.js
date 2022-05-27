@@ -6,6 +6,7 @@ import HomePage from './components/HomePage';
 import MoviePage from './components/MoviePage';
 import TvShowspage from './components/tvshowsPage';
 import BookmarkPage from './components/Bookmark';
+import NotFound from './components/NotFound';
 import { useState } from 'react';
 
 function App() { 
@@ -39,6 +40,7 @@ function App() {
         <Route path='/movies' element={<MoviePage onBookmark={handleBookmark} bookmarks={movieBookmark}/>}/>
         <Route path='/tvshows' element={<TvShowspage onBookmark={handleBookmark} bookmarks={seriesBookmark}/>}/>
         <Route path='/bookmark' element={<BookmarkPage seriesBookmark={seriesBookmark} movieBookmark={movieBookmark} onBookmark={handleBookmark}/>}/>
+        <Route path='*' element={<NotFound/>}/>
       {/* <DetailsCard data={data1}/> */}
     </Routes>
     </>
