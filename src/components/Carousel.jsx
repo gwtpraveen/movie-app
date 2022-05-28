@@ -25,12 +25,16 @@ const Carousel = ({data}) => {
         }
     }
 
+    const timer = setInterval(() => {
+        moveCarousel("left");
+    }, 2000)
+
     return ( 
         <div className="carousel" ref={card}>
             <div className="container">
                 {data.map((item, idx) => <SpecialCard data={item} key={idx}/>)}
             </div>
-            <div className="left-arrow arrows" onClick={() => moveCarousel("right")}>
+            <div className="left-arrow arrows" onClick={() => {clearInterval(timer);moveCarousel("right")}}>
                 <i className="fa-solid fa-angle-left"></i>
             </div>
             <div className="right-arrow arrows" onClick={() => moveCarousel("left")}>
