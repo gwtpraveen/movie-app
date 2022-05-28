@@ -1,7 +1,7 @@
-import Card from "./Card";
-import movies from "../json/movies.json";
-import tvShows from "../json/tvshows.json";
-import "../style/css/bookmarkpage.css"
+import Card from "../Card";
+import movies from "../../json/movies.json";
+import tvShows from "../../json/tvshows.json";
+import "../../style/css/bookmarkpage.css"
 
 const BookmarkPage = ({seriesBookmark, movieBookmark, onBookmark}) => {
     return ( 

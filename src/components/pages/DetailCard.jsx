@@ -1,7 +1,18 @@
-import FontAwesome from "react-fontawesome";
-import "../style/css/detailsCard.css";
+import "../../style/css/detailsCard.css";
+import movies from "../../json/movies.json";
+import tvshows from "../../json/tvshows.json"
+import { useParams } from "react-router-dom";
 
-const DetailsCard = ({data}) => {
+const DetailsCard = () => {
+    let params = useParams();
+    let data;
+
+    if (params.type === "movie") {
+        data = movies.filter(item => item.imdbID === params.id)[0];
+    } else {
+        data = tvshows.filter(item => item.imdbID === params.id)[0];
+    }
+
     const {Title, Plot, Poster, Released, Production, Type, Rated, Runtime, imdbRating, imdbVotes, Language, Genre, Director, Writer, Actors, Awards, BoxOffice, Country} = data;
     return ( 
         <div className="details-card">
@@ -22,7 +33,7 @@ const DetailsCard = ({data}) => {
                         </div>
                     </div>
                     <div className="rating-div">
-                        <FontAwesome className="fa-solid fa-star" />
+                        <i className="fa-solid fa-star" />
                         <div>
                             <span className="rating">{imdbRating}</span><span className="ten">/10</span>
                             <p>{imdbVotes}</p>

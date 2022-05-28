@@ -1,9 +1,9 @@
-import Carousel from './Carousel';
-import Card from './Card';
-import "../style/css/homepage.css";
-import movies from "../json/movies.json";
-import tvshows from "../json/tvshows.json";
-import mostpopular from "../json/mostpopular.json";
+import Carousel from '../Carousel';
+import Card from '../Card';
+import "../../style/css/homepage.css";
+import movies from "../../json/movies.json";
+import tvshows from "../../json/tvshows.json";
+import mostpopular from "../../json/mostpopular.json";
 import { useState } from 'react';
 
 const HomePage = ({onBookmark, movieBookmark, seriesBookmark}) => {
@@ -20,7 +20,8 @@ const HomePage = ({onBookmark, movieBookmark, seriesBookmark}) => {
 
     return ( 
         <div className='homePage container'>
-            <section>
+            <section className='section'>
+                <h2 className='TitleH2'>Most Popular</h2>
                 <Carousel data={mostpopular}/>
             </section>
             <section className='section'>
