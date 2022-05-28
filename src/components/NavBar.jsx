@@ -1,9 +1,15 @@
 import "../style/css/navBar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { useRef } from "react";
 
 const NavBar = (props) => {
+    const navBar = useRef();
+    const showMenu = () => {
+        navBar.current.classList.toggle("show");
+    };
+
     return ( 
-        <nav className="nav">
+        <nav className="nav" ref={navBar}>
             <NavLink to="/home"><img src="./images/icons/logo.svg" alt="logo" className="logo"/></NavLink>
             <div className="nav-icon-list">
                 <NavLink to="/home">
@@ -27,7 +33,15 @@ const NavBar = (props) => {
                     </svg>
                 </NavLink>
             </div>
-            <img src="./images/icons/image-avatar.png" alt="user profile" className="profile-pic"/>
+            <img src="./images/icons/image-avatar.png" alt="user profile" className="profile-pic" onClick={showMenu}/>
+            <ul className="opctions">
+                <Link to="/">Profile<div className="icon"><i className="fa-solid fa-user"></i></div></Link>
+                <Link to="/">Billing<div className="icon"><i className="fa-solid fa-wallet"></i></div></Link>
+                <Link to="/">Setting<div className="icon"><i className="fa-solid fa-gear"></i></div></Link>
+                <Link to="/">Help & support<div className="icon"><i className="fa-solid fa-circle-question"></i></div></Link>
+                <Link to="/">Give Feedback<div className="icon"><i className="fa-solid fa-comment-dots"></i></div></Link>
+                <Link to="/">Sign out<div className="icon"><i className="fa-solid fa-arrow-right-from-bracket"></i></div></Link>
+            </ul>
         </nav>
      );
 }

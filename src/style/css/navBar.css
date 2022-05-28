@@ -5,6 +5,7 @@
   justify-content: space-between;
   max-width: 1280px;
   margin: 0 auto 1.5rem;
+  position: relative;
 }
 .nav .nav-icon-list {
   display: flex;
@@ -25,6 +26,42 @@
 }
 .nav .profile-pic {
   width: 60px;
+  cursor: pointer;
+}
+.nav .opctions {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background-color: rgb(195, 195, 195);
+  padding: 1rem 2rem;
+  z-index: 10;
+  list-style-type: none;
+  display: none;
+}
+.nav .opctions a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+.nav .opctions a:hover .icon {
+  background-color: rgba(115, 115, 115, 0.642);
+}
+.nav .opctions a .icon {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(115, 115, 115, 0.353);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  transition: 500ms ease;
+}
+.nav.show .opctions {
+  display: block;
 }
 
 /*# sourceMappingURL=navBar.css.map */
