@@ -11,6 +11,9 @@
   align-items: center;
   gap: 1.5rem;
 }
+.nav .nav-icon-list .active .nav-icon path {
+  fill: rgb(252, 92, 0);
+}
 .nav .nav-icon-list .nav-icon {
   cursor: pointer;
 }
