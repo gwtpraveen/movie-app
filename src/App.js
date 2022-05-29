@@ -7,6 +7,7 @@ import MoviePage from './components/pages/MoviePage';
 import TvShowspage from './components/pages/tvshowsPage';
 import BookmarkPage from './components/pages/Bookmark';
 import NotFound from './components/pages/NotFound';
+import ToTop from './components/ToTop';
 import { useState } from 'react';
 
 function App() { 
@@ -43,6 +44,7 @@ function App() {
         <Route path="/home/details/:type/:id" element={<DetailsCard/>}/>
         <Route path='*' element={<NotFound/>}/>
     </Routes>
+    <ToTop/>
     </>
   );
 }
