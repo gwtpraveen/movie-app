@@ -4,13 +4,26 @@ import { useRef } from "react";
 
 const NavBar = (props) => {
     const navBar = useRef();
+    const checkboxEl = useRef();
+    const labelEl = useRef();
+
+    const changeTheme = () => {
+        if (checkboxEl.current.checked) {
+            labelEl.current.classList.add("checked");
+        } else {
+            labelEl.current.classList.remove("checked");
+        }
+    }; 
+
     const showMenu = () => {
         navBar.current.classList.toggle("show");
     };
 
     return ( 
-        <nav className="nav" ref={navBar}>
-            <NavLink to="/home"><img src="./images/icons/logo.svg" alt="logo" className="logo"/></NavLink>
+        <nav className="nav" ref={navBar} id="#nav">
+            <NavLink to="/home">
+                <img src="./images/icons/logo.svg" alt="logo" className="logo"/>
+            </NavLink>
             <div className="nav-icon-list">
                 <NavLink to="/home">
                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="nav-icon">
@@ -33,14 +46,57 @@ const NavBar = (props) => {
                     </svg>
                 </NavLink>
             </div>
-            <img src="./images/icons/image-avatar.png" alt="user profile" className="profile-pic" onClick={showMenu}/>
+            <div className="theme-profile">
+                <div className="themeBtn">
+                    <label htmlFor="theme" className="switch" onClick={changeTheme} ref={labelEl} >
+                        <div className="circle">
+                            <i className="fa-solid fa-sun"></i>
+                            <i className="fa-solid fa-moon"></i>
+                        </div>
+                    </label>
+                    <input type="checkbox" name="theme" id="theme" className="checkbox" ref={checkboxEl}/>
+                </div>
+                <div className="profile">
+                    <img src="./images/icons/image-avatar.png" alt="user profile" className="profile-pic" onClick={showMenu}/>
+                </div>
+            </div>
             <ul className="opctions">
-                <Link to="/">Profile<div className="icon"><i className="fa-solid fa-user"></i></div></Link>
-                <Link to="/">Billing<div className="icon"><i className="fa-solid fa-wallet"></i></div></Link>
-                <Link to="/">Setting<div className="icon"><i className="fa-solid fa-gear"></i></div></Link>
-                <Link to="/">Help & support<div className="icon"><i className="fa-solid fa-circle-question"></i></div></Link>
-                <Link to="/">Give Feedback<div className="icon"><i className="fa-solid fa-comment-dots"></i></div></Link>
-                <Link to="/">Sign out<div className="icon"><i className="fa-solid fa-arrow-right-from-bracket"></i></div></Link>
+                <Link to="/">
+                    Profile
+                    <div className="icon">
+                        <i className="fa-solid fa-user"></i>
+                    </div>
+                </Link>
+                <Link to="/">
+                    Billing
+                    <div className="icon">
+                        <i className="fa-solid fa-wallet"></i>
+                    </div>
+                </Link>
+                <Link to="/">
+                    Setting
+                    <div className="icon">
+                        <i className="fa-solid fa-gear"></i>
+                    </div>
+                </Link>
+                <Link to="/">
+                    Help & support
+                    <div className="icon">
+                        <i className="fa-solid fa-circle-question"></i>
+                    </div>
+                </Link>
+                <Link to="/">
+                    Give Feedback
+                    <div className="icon">
+                        <i className="fa-solid fa-comment-dots"></i>
+                    </div>
+                </Link>
+                <Link to="/">
+                    Sign out
+                    <div className="icon">
+                        <i className="fa-solid fa-arrow-right-from-bracket"></i>
+                    </div>
+                </Link>
             </ul>
         </nav>
      );

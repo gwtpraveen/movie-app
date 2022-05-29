@@ -28,6 +28,52 @@
   width: 60px;
   cursor: pointer;
 }
+.nav .theme-profile {
+  display: flex;
+  align-items: center;
+}
+.nav .theme-profile .themeBtn {
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+.nav .theme-profile .themeBtn .switch {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgb(127, 127, 127);
+  cursor: pointer;
+}
+.nav .theme-profile .themeBtn .switch .circle {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(229, 229, 229);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  transition: 500ms ease-in;
+}
+.nav .theme-profile .themeBtn .switch .circle .fa-moon {
+  display: none;
+}
+.nav .theme-profile .themeBtn .switch.checked .circle {
+  left: 40%;
+}
+.nav .theme-profile .themeBtn .switch.checked .circle .fa-moon {
+  display: block;
+}
+.nav .theme-profile .themeBtn .switch.checked .circle .fa-sun {
+  display: none;
+}
+.nav .theme-profile .themeBtn .checkbox {
+  display: none;
+}
 .nav .opctions {
   position: absolute;
   right: 0;
@@ -52,7 +98,7 @@
 .nav .opctions a .icon {
   width: 30px;
   height: 30px;
-  background-color: rgba(115, 115, 115, 0.353);
+  background-color: rgba(115, 115, 115, 0.167);
   display: flex;
   align-items: center;
   justify-content: center;

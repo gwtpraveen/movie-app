@@ -39,6 +39,64 @@
         cursor: pointer;
     }
 
+    .theme-profile {
+        display: flex;
+        align-items: center;
+
+        .themeBtn {
+            width: 50px;
+            height: 30px;
+            border-radius: 25px;
+            overflow: hidden;
+            margin-right: 1rem;
+            .switch {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                background-color: rgb(127, 127, 127);
+                cursor: pointer;
+
+                .circle {
+                    width: 30px;
+                    height: 30px;
+                    background-color: rgb(229, 229, 229);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    left: 0;
+                    transition: 500ms ease-in;
+
+                    // right: 0;
+
+                    .fa-moon {
+                        display: none;
+                    }
+                }
+            }
+
+            .switch.checked {
+                .circle {
+                    left: 40%;
+
+                    .fa-moon {
+                        display: block;
+                    }
+
+                    .fa-sun {
+                        display: none;
+                    }
+                }
+            }
+
+            .checkbox {
+                display: none;
+            }
+        }
+    }
+
     .opctions {
         position: absolute;
         right: 0;
@@ -66,7 +124,7 @@
             .icon {
                 width: 30px;
                 height: 30px;
-                background-color: rgba(115, 115, 115, 0.353);
+                background-color: rgba(115, 115, 115, 0.167);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -83,4 +141,3 @@
         }
     }
 }
-
