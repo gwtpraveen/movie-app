@@ -1,0 +1,42 @@
+.contactus {
+  max-width: 1280px;
+  margin: auto;
+}
+.contactus .h1 {
+  font-size: 2rem;
+}
+.contactus form {
+  max-width: 1000px;
+  margin: auto;
+}
+.contactus form .formGroup {
+  margin: 1.5rem auto;
+}
+.contactus form .formGroup .label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.contactus form .formGroup .inputFeild {
+  padding: 0.5em 1em;
+  width: 100%;
+}
+.contactus form .formGroupTextArea {
+  margin: 1.5rem auto;
+}
+.contactus form .formGroupTextArea .label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.contactus form .formGroupTextArea .textarea {
+  width: 100%;
+  resize: none;
+  padding: 0.5rem 1rem;
+}
+.contactus form .sendBtn {
+  padding: 0.5em 2em;
+  display: block;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=contactus.css.map */

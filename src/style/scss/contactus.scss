@@ -1,0 +1,45 @@
+.contactus {
+    max-width: 1280px;
+    margin: auto;
+    .h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        max-width: 1000px;
+        margin: auto;
+        .formGroup {
+            margin: 1.5rem auto;
+            .label {
+                display: block;
+                margin-bottom: .4rem;
+            }
+    
+            .inputFeild {
+                padding: .5em 1em;
+                width: 100%;
+            }
+        }
+    
+        .formGroupTextArea {
+            margin: 1.5rem auto;
+            .label {
+                display: block;
+                margin-bottom: .4rem;
+            }
+    
+            .textarea {
+                width: 100%;
+                resize: none;
+                padding: .5rem 1rem;
+            }
+        }
+    
+        .sendBtn {
+            padding: .5em 2em;
+            display: block;
+            margin: 1rem auto;
+            cursor: pointer;
+        }
+    }
+}
