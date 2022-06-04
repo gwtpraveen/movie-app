@@ -1,6 +1,15 @@
-.tvshowSection {
+.section {
   max-width: 1280px;
   margin: 2.5rem auto;
+}
+.section .showResult {
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+.section .showResult span {
+  text-decoration: underline;
+}
+.section .tvshowSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -4,10 +4,11 @@ import NavBar from './components/NavBar';
 import DetailsCard from './components/pages/DetailCard';
 import HomePage from './components/pages/HomePage';
 import MoviePage from './components/pages/MoviePage';
-import TvShowspage from './components/pages/tvshowsPage';
+import TvShowspage from './components/pages/TvshowsPage';
 import BookmarkPage from './components/pages/Bookmark';
 import NotFound from './components/pages/NotFound';
 import ToTop from './components/ToTop';
+import ContactUs from './components/pages/ContactUs';
 import { useState } from 'react';
 
 function App() { 
@@ -37,11 +38,11 @@ function App() {
     <NavBar/>
     <Routes>
         <Route path='/' element={<HomePage onBookmark={handleBookmark} movieBookmark={movieBookmark} seriesBookmark={seriesBookmark}/>}/>
-        <Route path="/home" element={<HomePage onBookmark={handleBookmark} movieBookmark={movieBookmark} seriesBookmark={seriesBookmark}/>}/>
         <Route path='/movies' element={<MoviePage onBookmark={handleBookmark} bookmarks={movieBookmark}/>}/>
         <Route path='/tvshows' element={<TvShowspage onBookmark={handleBookmark} bookmarks={seriesBookmark}/>}/>
         <Route path='/bookmark' element={<BookmarkPage seriesBookmark={seriesBookmark} movieBookmark={movieBookmark} onBookmark={handleBookmark}/>}/>
         <Route path="/home/details/:type/:id" element={<DetailsCard/>}/>
+        <Route path="/contactUs" element={<ContactUs/>} />
         <Route path='*' element={<NotFound/>}/>
     </Routes>
     <ToTop/>

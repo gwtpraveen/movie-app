@@ -1,8 +1,19 @@
-.tvshowSection {
+.section {
     max-width: 1280px;
     margin: 2.5rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+
+    .showResult {
+        font-weight: bold;
+        margin-bottom: 2.5rem;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+    .tvshowSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
 }

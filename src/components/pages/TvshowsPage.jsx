@@ -2,6 +2,7 @@ import "../../style/css/tvshowspage.css";
 import Card from "../Card";
 import tvshows from "../../json/tvshows.json";
 import SearchBar from "../SearchBar";
+import ResultNotFound from "../ResultNotFound";
 import { useState } from "react";
 
 const TvShowspage = ({onBookmark, bookmarks}) => {
@@ -18,9 +19,16 @@ const TvShowspage = ({onBookmark, bookmarks}) => {
     return ( 
         <>
             <SearchBar onUserSubmit={handleUserInput} placeholderText="Search Tv Series by Name"/>
-            <section className="tvshowSection">
-                {filterData.map((item, idx) => <Card key={idx} data={item} onBookmark={onBookmark} bookmarks={bookmarks}/>)}
+            <section className="section">
+                {userSearch ? filterData.length !== 0 ? <p className="showResult">Show result <span>{userSearch}</span></p> : null : null}
+                {filterData.length !== 0 ?
+                <div className="tvshowSection">
+                    {filterData.map((item, idx) => <Card key={idx} data={item} onBookmark={onBookmark} bookmarks={bookmarks}/>)}
+                </div> :
+                    <ResultNotFound userSearch={userSearch} bookmarks={bookmarks} onBookmark={onBookmark}/>
+                }
             </section>
+
         </>
      );
 }

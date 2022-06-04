@@ -8,7 +8,7 @@ const NavBar = (props) => {
     const labelEl = useRef();
 
     const changeTheme = () => {
-        if (checkboxEl.current.checked) {
+        if (!checkboxEl.current.checked) {
             labelEl.current.classList.add("checked");
         } else {
             labelEl.current.classList.remove("checked");
@@ -21,11 +21,11 @@ const NavBar = (props) => {
 
     return ( 
         <nav className="nav" ref={navBar} id="#nav">
-            <NavLink to="/home">
+            <NavLink to="/">
                 <img src="./images/icons/logo.svg" alt="logo" className="logo"/>
             </NavLink>
             <div className="nav-icon-list">
-                <NavLink to="/home">
+                <NavLink to="/">
                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="nav-icon">
                         <path d="M8 0H1C.4 0 0 .4 0 1v7c0 .6.4 1 1 1h7c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1Zm0 11H1c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h7c.6 0 1-.4 1-1v-7c0-.6-.4-1-1-1ZM19 0h-7c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h7c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1Zm0 11h-7c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h7c.6 0 1-.4 1-1v-7c0-.6-.4-1-1-1Z" fill="#5A698F"/>
                     </svg>
@@ -79,14 +79,14 @@ const NavBar = (props) => {
                         <i className="fa-solid fa-gear"></i>
                     </div>
                 </Link>
-                <Link to="/">
+                <Link to="/contactUs">
                     Help & support
                     <div className="icon">
                         <i className="fa-solid fa-circle-question"></i>
                     </div>
                 </Link>
                 <Link to="/">
-                    Give Feedback
+                    Contact Us
                     <div className="icon">
                         <i className="fa-solid fa-comment-dots"></i>
                     </div>

@@ -1,10 +1,14 @@
 import "../../style/css/contactus.css";
 
 const ContactUs = (props) => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return ( 
         <section className="contactus">
             <h1 className="h1">Contact us</h1>
-            <form action="/" method="post">
+            <form action="/" method="post" onSubmit={handleSubmit}>
                 <div className="formGroup">
                     <label htmlFor="username" className="label">User Name</label>
                     <input type="text" name="username" id="username" className="inputFeild"/>
