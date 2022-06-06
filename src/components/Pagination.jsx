@@ -8,11 +8,7 @@ const Pagination = ({totalItems, itemPerPage, onPageChange}) => {
 
     useEffect(() => {
         onPageChange(page);
-        window.scrollTo({
-            top: 0, 
-            behavior: 'smooth'
-        });
-    })
+    }, [page, onPageChange])
 
     for (let i = 0; i < items; i++) {
         numbers.push(i + 1);
@@ -33,8 +29,7 @@ const Pagination = ({totalItems, itemPerPage, onPageChange}) => {
             setPage(prevVal => prevVal - 1);
         }
     };
-    console.log("the page, ",page, "index", numbers.indexOf(page))
-    console.log(numbers.slice(numbers.indexOf(page) - 2, numbers.indexOf(page) + 3))
+
     return ( 
         <ul className="pagination">
             <li className="item prev" onClick={clickPrev}>Prev</li>

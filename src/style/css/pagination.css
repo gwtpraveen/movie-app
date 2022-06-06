@@ -9,18 +9,18 @@
 .pagination .item {
   width: 50px;
   padding: 0.5rem;
-  background-color: rgba(50, 195, 50, 0.29);
+  background-color: rgba(252, 71, 71, 0.1215686275);
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .pagination .item:hover {
-  background-color: rgb(50, 195, 50);
+  background-color: rgba(252, 71, 71, 0.7803921569);
   cursor: pointer;
 }
 .pagination .item.active {
-  background-color: rgb(50, 195, 50);
+  background-color: rgba(252, 71, 71, 0.7803921569);
 }
 
 /*# sourceMappingURL=pagination.css.map */

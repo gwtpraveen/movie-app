@@ -20,7 +20,8 @@ const NavBar = (props) => {
     };
 
     return ( 
-        <nav className="nav" ref={navBar} id="#nav">
+        <nav className="nav-container" id="#nav">
+            <div className="nav" ref={navBar}>
             <NavLink to="/">
                 <img src="./images/icons/logo.svg" alt="logo" className="logo"/>
             </NavLink>
@@ -98,6 +99,7 @@ const NavBar = (props) => {
                     </div>
                 </Link>
             </ul>
+            </div>
         </nav>
      );
 }
