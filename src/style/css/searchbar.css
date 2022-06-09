@@ -27,4 +27,12 @@
   outline: 1px solid rgba(128, 128, 128, 0.413);
 }
 
+body.dark .search .form-group .search-icon {
+  color: rgba(255, 255, 255, 0.689);
+}
+body.dark .search .form-group .search-input {
+  background-color: rgb(62, 62, 62);
+  color: #fff;
+}
+
 /*# sourceMappingURL=searchbar.css.map */

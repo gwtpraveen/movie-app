@@ -72,4 +72,8 @@
   transform: scale(1);
 }
 
+body.dark .card .details-container .title {
+  color: #fff;
+}
+
 /*# sourceMappingURL=card.css.map */

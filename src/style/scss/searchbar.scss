@@ -29,3 +29,17 @@
         }
     }
 }
+
+body.dark .search {
+
+    .form-group {
+        .search-icon {
+            color: rgba(255, 255, 255, 0.689);
+        }
+        
+        .search-input {
+            background-color: rgb(62, 62, 62);
+            color: #fff;
+        }
+    }
+}

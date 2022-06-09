@@ -117,4 +117,33 @@
   display: block;
 }
 
+body.dark .nav-container {
+  background-color: rgb(62, 62, 62);
+}
+body.dark .nav-container .nav .nav-icon-list .nav-icon path {
+  fill: rgba(255, 255, 255, 0.533);
+}
+body.dark .nav-container .nav .nav-icon-list .nav-icon:hover path {
+  fill: rgb(252, 92, 0);
+}
+body.dark .nav-container .nav .nav-icon-list .active .nav-icon path {
+  fill: rgb(252, 92, 0);
+}
+body.dark .nav-container .nav .theme-profile .themeBtn {
+  box-shadow: 0px 0px 5px rgba(211, 211, 211, 0.2352941176);
+}
+body.dark .nav-container .nav .theme-profile .themeBtn .switch {
+  background-color: rgb(67, 67, 67);
+}
+body.dark .nav-container .nav .theme-profile .themeBtn .switch .circle {
+  background-color: rgb(67, 67, 67);
+}
+body.dark .nav-container .nav .opctions {
+  background-color: rgb(67, 67, 67);
+  outline: 3px solid rgba(255, 255, 255, 0.142);
+}
+body.dark .nav-container .nav .opctions a {
+  color: #fff;
+}
+
 /*# sourceMappingURL=navBar.css.map */

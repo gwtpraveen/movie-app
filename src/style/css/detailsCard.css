@@ -5,7 +5,6 @@
   grid-template-areas: "details img";
   max-width: 1200px;
   margin: auto;
-  background-color: rgba(255, 2, 2, 0.202);
   align-items: center;
   padding: 10px;
 }

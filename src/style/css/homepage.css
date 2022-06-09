@@ -32,4 +32,9 @@
   color: #fff;
 }
 
+body.dark .homePage.container .showMoreBtn {
+  color: #fff;
+  background-color: rgba(252, 92, 0, 0.461);
+}
+
 /*# sourceMappingURL=homepage.css.map */

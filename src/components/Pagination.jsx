@@ -33,7 +33,11 @@ const Pagination = ({totalItems, itemPerPage, onPageChange}) => {
     return ( 
         <ul className="pagination">
             <li className="item prev" onClick={clickPrev}>Prev</li>
-            {numbers.map(item => <li key={item} className={page === item ? "item active" : "item"} onClick={() => handlePageNum(item)}>{item}</li>)}
+            {numbers.slice(page < 3 ? 0 : numbers.indexOf(page - 2), numbers.indexOf(page + 2)).map(item => <li key={item} className={page === item ? "item active" : "item"} onClick={() => handlePageNum(item)}>{item}</li>)}
+            {page < totalItems - 3 ? <>
+                <li className="item">...</li>
+                <li className="item">{totalItems}</li>
+            </> : null}
             <li className="item next" onClick={clickNext}>Next</li>
         </ul>  
      );

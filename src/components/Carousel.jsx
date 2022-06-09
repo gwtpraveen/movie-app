@@ -21,7 +21,9 @@ const Carousel = ({data}) => {
             } else {
                 offset.current = 0;
             }
-            card.current.firstElementChild.style.transform = `translateX(${offset.current}px)`;
+            if (card.current !== null) {
+                card.current.firstElementChild.style.transform = `translateX(${offset.current}px)`;
+            }
         }
     }
 
