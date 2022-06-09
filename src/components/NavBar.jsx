@@ -10,8 +10,10 @@ const NavBar = (props) => {
     const changeTheme = () => {
         if (!checkboxEl.current.checked) {
             labelEl.current.classList.add("checked");
+            document.body.classList.add("dark");
         } else {
             labelEl.current.classList.remove("checked");
+            document.body.classList.remove("dark");
         }
     }; 
 
