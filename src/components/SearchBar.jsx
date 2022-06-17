@@ -12,7 +12,7 @@ const SearchBar = ({onUserSubmit, placeholderText}) => {
     return ( 
         <form className="search" onSubmit={handleSubmit}>
             <div className="form-group">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <i className="fa-solid fa-magnifying-glass search-icon"></i>
                 <input type="text" name="userSearch" placeholder={placeholderText} className="search-input" autoComplete="off"/>
             </div>
         </form>

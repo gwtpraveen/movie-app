@@ -5,18 +5,17 @@ import SearchBar from "../SearchBar";
 import ResultNotFound from "../ResultNotFound";
 import { useState } from "react";
 import Pagination from "../Pagination";
+import { useParams } from "react-router-dom";
 
 const MoviePage = ({onBookmark, bookmarks}) => {
     const [userSearch, setUserSearch] = useState("");
-    const [pageNumber, setPageNumber] = useState(1);
+    let params = useParams();
+    let pageNumber = params.page;
 
     const handleUserInput = (input) => {
         setUserSearch(input);
     };
 
-    const handlePageChange = (pageNumber) => {
-        setPageNumber(pageNumber);
-    };
     let filterData = movies;
     if (userSearch) {
         filterData = filterData.filter(item => item.Title.toLowerCase().startsWith(userSearch));
@@ -35,7 +34,7 @@ const MoviePage = ({onBookmark, bookmarks}) => {
                     <><div className="moviesSection">
                         {filterData.map((item, idx) => <Card key={idx} data={item} onBookmark={onBookmark} bookmarks={bookmarks}/>)}
                     </div>
-                        {true ? <Pagination onPageChange={handlePageChange} itemPerPage={12} totalItems={250}/> : null}
+                        {true ? <Pagination itemPerPage={12} totalItems={250}/> : null}
                     </> :
                     <ResultNotFound userSearch={userSearch} bookmarks={bookmarks} onBookmark={onBookmark}/>
                 }

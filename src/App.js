@@ -52,7 +52,7 @@ function App() {
           }
         />
         <Route
-          path="/movies"
+          path="/movies/:page"
           element={
             <MoviePage onBookmark={handleBookmark} bookmarks={movieBookmark} />
           }
