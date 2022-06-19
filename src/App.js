@@ -58,7 +58,7 @@ function App() {
           }
         />
         <Route
-          path="/tvshows"
+          path="/tvshows/:page"
           element={
             <TvShowspage
               onBookmark={handleBookmark}

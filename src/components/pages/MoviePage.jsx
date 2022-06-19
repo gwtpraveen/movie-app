@@ -34,7 +34,7 @@ const MoviePage = ({onBookmark, bookmarks}) => {
                     <><div className="moviesSection">
                         {filterData.map((item, idx) => <Card key={idx} data={item} onBookmark={onBookmark} bookmarks={bookmarks}/>)}
                     </div>
-                        {true ? <Pagination itemPerPage={12} totalItems={250}/> : null}
+                        {true ? <Pagination itemPerPage={12} totalItems={250} pageName="movies"/> : null}
                     </> :
                     <ResultNotFound userSearch={userSearch} bookmarks={bookmarks} onBookmark={onBookmark}/>
                 }
