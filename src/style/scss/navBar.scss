@@ -20,7 +20,7 @@
         .active {
             .nav-icon {
                 path {
-                    fill: rgb(252, 92, 0);
+                    fill: #fc5c00;
                 }
             }
         }
@@ -33,7 +33,7 @@
 
             &:hover {
                 path {
-                    fill: rgb(252, 92, 0);
+                    fill: #fc5c00;
                 }
             }
         }
@@ -124,14 +124,14 @@
 
             &:hover {
                 .icon {
-                    background-color: rgba(115, 115, 115, 0.642);
+                    background-color: #fc5c00;
                 }
             }
 
             .icon {
                 width: 30px;
                 height: 30px;
-                background-color: rgba(115, 115, 115, 0.167);
+                background-color: #fc5c0026;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -161,7 +161,7 @@ body.dark .nav-container {
 
               &:hover {
                 path {
-                    fill: rgb(252, 92, 0);
+                    fill: #fc5c00;
                 }
             }
           }
@@ -169,7 +169,7 @@ body.dark .nav-container {
           .active {
               .nav-icon {
                   path {
-                    fill :rgb(252, 92, 0);
+                    fill : #fc5c00;
                   }
               }
           }

@@ -16,10 +16,14 @@
 }
 .totop:hover {
   cursor: pointer;
-  background-color: rgba(252, 92, 0, 0.202);
+  background-color: #fc5c00;
 }
 .totop:hover .fa-angles-up {
   transform: scale(1.2);
+}
+
+body.dark .totop .fa-angles-up {
+  color: #fff;
 }
 
 /*# sourceMappingURL=totop.css.map */

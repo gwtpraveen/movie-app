@@ -20,11 +20,15 @@
   justify-content: center;
 }
 .pagination .item:hover {
-  background-color: rgba(252, 71, 71, 0.7803921569);
+  background-color: #fc5c00;
   cursor: pointer;
 }
 .pagination .item.active {
-  background-color: rgba(252, 71, 71, 0.7803921569);
+  background-color: #fc5c00;
+}
+
+body.dark .pagination a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=pagination.css.map */

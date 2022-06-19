@@ -21,14 +21,22 @@
         justify-content: center;
 
         &:hover {
-            background-color: #fc4747c7;
+            background-color: #fc5c00;
             cursor: pointer;
         }
 
         &.active {
             // background-color: #fc4747;
-            background-color: #fc4747c7;
+            background-color: #fc5c00;
         }
     }
 
+}
+
+body.dark {
+    .pagination {
+        a {
+            color: #fff;
+        }
+    }
 }
