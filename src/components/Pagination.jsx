@@ -10,7 +10,6 @@ const Pagination = ({totalItems, itemPerPage, pageName}) => {
     const numbers = [];
     let start = 0;
     let end = 5;
-    console.log(totalPages)
 
     if (page < 3) {
         start = 0;

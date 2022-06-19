@@ -9,7 +9,7 @@ const ResultNotFound = ({userSearch, bookmarks, onBookmark}) => {
     
     return ( 
         <section>
-            <a href="/movies">Back</a>
+            <a href="/movies/1">Back</a>
             <p>result not found on <span>{userSearch}</span></p>
             <div className="resutlnotfoundMovies">
                 {results.map((item, idx) => <Card key={idx} data={item} bookmarks={bookmarks} onBookmark={onBookmark}/>)}

@@ -25,14 +25,13 @@ const TvShowspage = ({onBookmark, bookmarks}) => {
         <>
             <SearchBar onUserSubmit={handleUserInput} placeholderText="Search TV Show By Name"/>
             <section className="section">
-                {userSearch ? filterData.length !== 0 ? <p className="showResult">Show result <span>{userSearch}</span></p> : null : null}
                 <section className="section">
-                {userSearch ? filterData.length !== 0 ? <p className="showResult">Show result <span>{userSearch}</span></p> : null : null}
+                {userSearch ? filterData.length !== 0 ? <><a href="/movies/1">Back</a><p className="showResult">Show result <span>{userSearch}</span></p></> : null : null}
                 {filterData.length !== 0 ?
                     <><div className="moviesSection">
                         {filterData.map((item, idx) => <Card key={idx} data={item} onBookmark={onBookmark} bookmarks={bookmarks}/>)}
                     </div>
-                        {true ? <Pagination itemPerPage={12} totalItems={250} pageName="movies"/> : null}
+                        {filterData.length === 12 ? <Pagination itemPerPage={12} totalItems={250} pageName="movies"/> : null}
                     </> :
                     <ResultNotFound userSearch={userSearch} bookmarks={bookmarks} onBookmark={onBookmark}/>
                 }
