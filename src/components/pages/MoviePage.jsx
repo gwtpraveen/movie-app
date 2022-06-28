@@ -2,7 +2,7 @@ import "../../style/css/moviepage.css";
 import Card from "../Card";
 import movies from "../../json/movies.json";
 import SearchBar from "../SearchBar";
-import ResultNotFound from "../ResultNotFound";
+import Result from "../Result";
 import { useState } from "react";
 import Pagination from "../Pagination";
 import { useParams, useNavigate } from "react-router-dom";
@@ -37,7 +37,7 @@ const MoviePage = ({onBookmark, bookmarks}) => {
                     </div>
                         {filterData.length === 12 ? <Pagination itemPerPage={12} totalItems={250} pageName="movies"/> : null}
                     </> :
-                    <ResultNotFound userSearch={userSearch} bookmarks={bookmarks} onBookmark={onBookmark}/>
+                    <Result userSearch={userSearch} bookmarks={bookmarks} onBookmark={onBookmark}/>
                 }
             </section>
         </>

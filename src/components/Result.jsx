@@ -2,7 +2,7 @@ import "../style/css/resultnotfound.css";
 import movies from "../json/movies.json";
 import Card from "./Card";
 
-const ResultNotFound = ({userSearch, bookmarks, onBookmark}) => {
+const Result = ({userSearch, bookmarks, onBookmark}) => {
     const keywords = userSearch.split(" ");
     const results = movies.filter(item => item.Title.toLocaleLowerCase().includes(keywords[0].toLocaleLowerCase()))
     console.log(results)
@@ -18,4 +18,4 @@ const ResultNotFound = ({userSearch, bookmarks, onBookmark}) => {
      );
 }
  
-export default ResultNotFound;
+export default Result;
